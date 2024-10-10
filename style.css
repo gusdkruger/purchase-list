@@ -1,0 +1,132 @@
+:root {
+    --dark-blue: #6482AD;
+    --light-blue: #7FA1C3;
+    --white: #F5EDED;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    color: var(--white);
+}
+
+body {
+    background-color: var(--light-blue);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 60px;
+    background-color: var(--dark-blue);
+    align-items: center;
+}
+
+header h2 {
+    font-size: 24px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    gap: 50px;
+}
+
+#list-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: var(--dark-blue);
+    width: 350px;
+}
+
+#list-form label {
+    font-size: 22px;
+    text-align: center;
+}
+
+#input-field {
+    padding: 7px;
+    background-color: transparent;
+    border: 2px solid var(--white);
+    border-radius: 15px;
+
+    &:focus {
+        outline: none;
+    }
+    &::placeholder {
+        color: var(--white);
+      }
+}
+
+#list-form button {
+    padding: 7px;
+    background-color: var(--white);
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    color: var(--dark-blue);
+    transition: 0.5s ease-out;
+
+    &:hover {
+        background-color: var(--light-blue);
+        color: var(--white);
+    }
+}
+
+#list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: var(--dark-blue);
+    width: 350px;
+}
+
+#list-container h2 {
+    font-size: 22px;
+    font-weight: normal;
+    text-align: center;
+}
+
+#list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#list li {
+    margin-left: 20px;
+    position: relative;
+    width: 270px;
+}
+
+#list li p {
+    word-wrap: break-word;
+}
+
+#list li button {
+    font-size: 16px;
+    padding: 5px;
+    background-color: var(--white);
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    color: var(--dark-blue);
+    position: absolute;
+    top: -5px;
+    right: -70px;
+    transition: 0.5s ease-out;
+
+    &:hover {
+        background-color: var(--light-blue);
+        color: var(--white);
+    }
+}
