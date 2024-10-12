@@ -72,7 +72,7 @@ main {
     border: none;
     cursor: pointer;
     color: var(--dark-blue);
-    transition: 0.5s ease-out;
+    transition: background-color 0.5s ease-out, color 0.5s ease-out;
 
     &:hover {
         background-color: var(--light-blue);
@@ -81,6 +81,10 @@ main {
 }
 
 #list-container {
+    display: none;
+}
+
+#list-container.show {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -123,7 +127,7 @@ main {
     position: absolute;
     top: -5px;
     right: -70px;
-    transition: 0.5s ease-out;
+    transition: background-color 0.5s ease-out, color 0.5s ease-out;
 
     &:hover {
         background-color: var(--light-blue);
