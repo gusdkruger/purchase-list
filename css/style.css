@@ -28,6 +28,7 @@ header {
     position: sticky;
     top: 0;
     box-shadow: 0 3px 10px 0 var(--dark-blue);
+    z-index: 1;
 }
 
 header h2 {
