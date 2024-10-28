@@ -21,6 +21,7 @@ export function addToList(text) {
     li.appendChild(p);
 
     const button = document.createElement("button");
+    button.classList.add("button", "custom-outline");
     button.innerText = "Delete";
     addEventToDelete(button);
     li.appendChild(button);
