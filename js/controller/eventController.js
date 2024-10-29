@@ -5,19 +5,22 @@ export function addEventToDelete(button) {
     button.addEventListener("click", event => {
         const text = event.target.previousSibling.innerText;
         removeFromLocalStorage(text);
-        event.target.parentElement.classList.add("slide-out");
-        setTimeout(() => {
-            event.target.parentElement.remove();
-            const li = document.querySelector("#list li");
-            if(!li) {
-                const listContainer = document.getElementById("list-container");
-                listContainer.classList.add("fade-out");
-                setTimeout(() => {
-                    listContainer.classList.remove("fade-in");
-                    listContainer.classList.remove("fade-out");
-                }, 350);
-            }
-        }, 350);
+        const list = event.target.parentElement.parentElement;
+        if(list.childElementCount === 1) {
+            const listContainer = list.parentElement;
+            listContainer.classList.add("fade-out");
+            setTimeout(() => {
+                listContainer.classList.remove("fade-in");
+                listContainer.classList.remove("fade-out");
+                event.target.parentElement.remove();
+            }, 350);
+        }
+        else {
+            event.target.parentElement.classList.add("slide-out");
+            setTimeout(() => {
+                event.target.parentElement.remove();
+            }, 350);
+        }
     });
 }
 
@@ -45,5 +48,4 @@ export function addEventToSubmit(form) {
             alert("Type something to add to the list");
         }
     });
-    
 }

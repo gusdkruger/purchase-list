@@ -32,7 +32,6 @@
     flex-direction: column;
     gap: 20px;
     height: fit-content;
-    transition: height 0.2s ease;
 }
 
 #list li {
