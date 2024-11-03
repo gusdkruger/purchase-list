@@ -2,9 +2,10 @@ import { removeFromLocalStorage, addToLocalStorage } from "./localStorageControl
 import { existsInList, addToList } from "./listController.js";
 
 export function addEventToDelete(button) {
-    button.addEventListener("click", event => {
+    button.addEventListener("click", (event) => {
         const text = event.target.previousSibling.innerText;
         removeFromLocalStorage(text);
+
         const list = event.target.parentElement.parentElement;
         if(list.childElementCount === 1) {
             const listContainer = list.parentElement;
@@ -25,16 +26,16 @@ export function addEventToDelete(button) {
 }
 
 export function addEventToSubmit(form) {
-    form.addEventListener("submit", event => {
+    form.addEventListener("submit", (event) => {
         event.preventDefault();
     
-        const input = document.getElementById("input-field");
+        const input = document.getElementById("form__input");
         const inputValue = input.value.trim();
         if(inputValue) {
             if(!existsInList(inputValue)) {
                 addToList(inputValue);
                 addToLocalStorage(inputValue)
-    
+
                 input.style.border = "2px solid var(--white)";
                 input.value = "";
             }

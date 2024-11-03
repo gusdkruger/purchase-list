@@ -2,7 +2,7 @@ import { addEventToDelete } from "./eventController.js";
 
 export function existsInList(text) {
     let exists = false;
-    const items = document.querySelectorAll("#list li");
+    const items = document.querySelectorAll("#container__list li");
     for(let i = 0; i < items.length && !exists; i++) {
         const currentText = items[i].getElementsByTagName("p")[0].innerText;
         exists = currentText === text;
@@ -11,7 +11,7 @@ export function existsInList(text) {
 }
 
 export function addToList(text) {
-    const listContainer = document.getElementById("list-container");
+    const listContainer = document.getElementById("container");
     listContainer.classList.add("fade-in");
 
     const li = document.createElement("li");
@@ -26,7 +26,7 @@ export function addToList(text) {
     addEventToDelete(button);
     li.appendChild(button);
 
-    const list = document.getElementById("list");
+    const list = document.getElementById("container__list");
     list.appendChild(li);
     setTimeout(() => {
         li.classList.add("slide-in");

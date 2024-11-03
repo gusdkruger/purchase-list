@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Create and manage a purchase list">
+        <meta name="description" content="Add and delete items from a purchase list">
         <link rel="icon" type="image/x-icon" href="./img/favicon.png">
         <title>Purchase List</title>
         <link rel="stylesheet" href="./css/style.css">
@@ -14,14 +14,14 @@
             <h2>Senac Tech</h2>
         </header>
         <main>
-            <form id="list-form">
-                <label for="input-field">Add an item to your purchase list</label>
-                <input class="custom-outline" id="input-field" type="text" placeholder="Item" minlength="1" maxlength="255">
-                <button class="button custom-outline" id="button" type="submit">Add</button>
+            <form id="form">
+                <label for="form__input">Add an item to your purchase list</label>
+                <input class="custom-outline" id="form__input" type="text" placeholder="Item" minlength="1" maxlength="255">
+                <button class="button custom-outline" id="form__button" type="submit">Add</button>
             </form>
-            <div id="list-container">
+            <div id="container">
                 <h2>Purchase List</h2>
-                <ul id="list"></ul>
+                <ul id="container__list"></ul>
             </div>
         </main>
     </body>

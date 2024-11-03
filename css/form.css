@@ -15,7 +15,7 @@ form label {
     text-align: center;
 }
 
-#input-field {
+#form__input {
     padding: 7px;
     background-color: transparent;
     border: 2px solid var(--white);
@@ -24,8 +24,4 @@ form label {
     &::placeholder {
         color: var(--white);
     }
-}
-
-form button {
-    padding: 7px;
 }
